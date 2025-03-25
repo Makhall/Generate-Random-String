@@ -28,7 +28,10 @@
       <button onclick="generateString()">Generate</button>
       <button onclick="copyToClipboard()">Copy</button>
       <p><strong>Generated String:</strong> <span id="output"></span></p>
-      <p><strong>Strength:</strong> <span id="strength"></span></p>
+      <p> 
+        <progress id="strengthBar" value="0" max="100"></progress> 
+        <span id="strength"></span>
+      </p>
     </div>
 
     <script src="script.js"></script>
