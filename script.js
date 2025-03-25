@@ -39,8 +39,11 @@ function checkStrength(password) {
   if (/[!@#$%^&*()_+{}\[\]|:;<>,.?/]/.test(password)) score++;
   if (password.length >= 12) score++;
 
-  const levels = ["Very Weak", "Weak", "Moderate", "Strong", "Very Strong"];
-  return levels[score - 1] || "Very Weak";
+  const levels = ["Weak", "Fair", "Good", "Strong", "Very Strong"];
+  const progressValues = [10, 30, 50, 75, 100];
+
+  document.getElementById("strengthBar").value = progressValues[score - 1] || 10;
+  return levels[score - 1] || "Weak";
 }
 
 // Copy to clipboard
