@@ -11,25 +11,39 @@
       <h2>Random Character Generator</h2>
 
       <label for="length">Length: <span id="lengthValue">4</span></label
-      ><br />
-      <input type="range" id="length" min="4" max="32" value="4" /><br />
-      <label
-        ><input type="checkbox" id="uppercase" checked /> Uppercase
-        Letters</label
-      ><br />
-      <label
-        ><input type="checkbox" id="lowercase" checked /> Lowercase
-        Letters</label
-      ><br />
-      <label><input type="checkbox" id="numbers" checked /> Numbers</label
-      ><br />
-      <label><input type="checkbox" id="symbols" /> Symbols</label><br />
+      ><br>
+      <input type="range" id="length" min="4" max="32" value="4" /><br>
+      <label class="switch">
+        <input type="checkbox" id="uppercase" checked /> 
+        <span class="slider"></span>
+        Uppercase Letters
+      </label><br>
+
+      <label class="switch">
+        <input type="checkbox" id="lowercase" checked>
+        <span class="slider"></span>
+        Lowercase Letters
+      </label><br>
+      
+      <label class="switch">
+        <input type="checkbox" id="numbers" checked>
+        <span class="slider"></span>
+        Numbers
+      </label><br>
+      
+      <label class="switch">
+        <input type="checkbox" id="symbols">
+        <span class="slider"></span>
+        Symbols
+      </label><br>
 
       <button onclick="generateString()">Generate</button>
       <button onclick="copyToClipboard()">Copy</button>
-      <p><strong>Generated String:</strong> <span id="output"></span></p>
+      <p>
+        <span id="output"></span>
+      </p>
       <p> 
-        <progress id="strengthBar" value="0" max="100"></progress> 
+        <progress id="strengthBar" value="0" max="100"></progress><br> 
         <span id="strength"></span>
       </p>
     </div>
