@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Character Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Random Character Generator</h2>
+
+      <label for="length">Length: <span id="lengthValue">4</span></label
+      ><br />
+      <input type="range" id="length" min="4" max="32" value="4" /><br />
+      <label
+        ><input type="checkbox" id="uppercase" checked /> Uppercase
+        Letters</label
+      ><br />
+      <label
+        ><input type="checkbox" id="lowercase" checked /> Lowercase
+        Letters</label
+      ><br />
+      <label><input type="checkbox" id="numbers" checked /> Numbers</label
+      ><br />
+      <label><input type="checkbox" id="symbols" /> Symbols</label><br />
+
+      <button onclick="generateString()">Generate</button>
+      <button onclick="copyToClipboard()">Copy</button>
+      <p><strong>Generated String:</strong> <span id="output"></span></p>
+      <p><strong>Strength:</strong> <span id="strength"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
